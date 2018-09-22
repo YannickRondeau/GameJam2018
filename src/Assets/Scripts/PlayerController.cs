@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour 
 {
-	[HideInInspector] public bool jump = true;
+	public bool jump = false;
 
 	/// <summary>
 	/// Determine the force that is applied to the player horizontal vector.
@@ -43,11 +43,14 @@ public class PlayerController : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		grounded = Physics2D.Linecast(transform.position, GroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+	void Update () 
+	{
+		grounded = Physics2D.OverlapCircle(GroundCheck.position, 0.2f, 1 << LayerMask.NameToLayer("Ground")); // checks if you are within 0.15 position in the Y of the ground
+		Debug.Log(grounded);
 
 		if(Input.GetButtonDown("Jump") && grounded)
 		{
+			Debug.Log("Jump");
 			jump = true;
 		}
 	}
