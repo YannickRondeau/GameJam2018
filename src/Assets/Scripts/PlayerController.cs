@@ -9,12 +9,17 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// Determine the force that is applied to the player horizontal vector.
 	/// </summary>
-	public float MoveForce = 200f;
+	public float Speed = 20f;
+
+	/// <summary>
+	/// Determine the bonus multiplicator for the player's speed!
+	/// </summary>
+	public float SpeedBooster = 0.5f;
 
 	/// <summary>
 	/// Determine the force that is applied to the player vertical vector (While jumping).
 	/// </summary>
-	public float JumpForce = 500f;
+	public float JumpForce = 20f;
 
 	/// <summary>
 	/// Determine the position at which the ground will be looked at.
@@ -22,14 +27,16 @@ public class PlayerController : MonoBehaviour
 	public Transform GroundCheck;
 
 	private bool grounded = false;
+
 	private float MaxSpeed 
 	{
-		get { return stats.Speed  * (1 + stats.SpeedFactor); }
+		get { return Speed  * (1 + Mathf.Clamp(SpeedBooster, 0f, 2f)); }
 	}
 	private float MinSpeed 
 	{
-		get { return stats.Speed * ( 1 - stats.SpeedFactor); }
+		get { return Speed * ( 1 - Mathf.Clamp(SpeedBooster, 0f, 0.6f)); }
 	}
+
 	private Animator anim;
 	private Rigidbody2D rig;
 	private PlayerStats stats;
@@ -59,42 +66,30 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 		float h = Input.GetAxis("Horizontal");
-		//anim.SetFloat("Speed", Mathf.Abs(h));
 
-		if(h > 0 && Mathf.Abs(rig.velocity.x) < MaxSpeed)
+		Vector2 movement = Vector2.right * Speed;
+
+		if(h > 0)
 		{
-			rig.velocity = rig.velocity * 1.1f;
-		//	rig.AddForce(new Vector2(6000,0));
-			Debug.Log("1.1");
+			movement *= MaxSpeed;
 		}
-		else if(h < 0 && Mathf.Abs(rig.velocity.x) > MinSpeed)
+		else if(h < 0)
 		{
-			rig.velocity = rig.velocity * 0.9f;
-			Debug.Log("0.9");
+			movement *= MinSpeed;
 		}
 		else if(h == 0)
 		{
-			rig.velocity = new Vector2(stats.Speed, rig.velocity.y);
-			Debug.Log("0");
+			movement *= Speed;
 		}
 
-		// // Ensure we are not exceeding min or max speed.
-		// if(Mathf.Abs(rig.velocity.x) > MaxSpeed)
-		// {
-		// 	rig.velocity = new Vector2(MaxSpeed, rig.velocity.y);
-		// }
-		// else if(Mathf.Abs(rig.velocity.x) < MinSpeed)
-		// {
-		// 	rig.velocity = new Vector2(MinSpeed, rig.velocity.y);
-		// }
+		rig.AddForce(movement);
 
-		// if(jump)
-		// {
-		// 	//anim.SetTrigger("Jump");
-		// 	rig.AddForce(new Vector2(0f, JumpForce));
-		// 	jump = false;
-		// }
 
-		Debug.Log(rig.velocity);
+		if(jump)
+		{
+			//anim.SetTrigger("Jump");
+			rig.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+			jump = false;
+		}
 	}
 }

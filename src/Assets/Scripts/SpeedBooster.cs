@@ -26,10 +26,10 @@ public class SpeedBooster : MonoBehaviour
 		// Spawn an effect.
 
 		// Apply effect to the player.
-		PlayerStats stats = player.GetComponent<PlayerStats>();
+		PlayerController playerController = player.GetComponent<PlayerController>();
 
 		// Multiply the speed of the player by the factor.
-		stats.SpeedFactor *= Multiplicator;
+		playerController.SpeedBooster *= Multiplicator;
 
 		GetComponent<SpriteRenderer>().enabled = false;
 		GetComponent<CircleCollider2D>().enabled = false;
@@ -38,7 +38,7 @@ public class SpeedBooster : MonoBehaviour
 		yield return new WaitForSeconds(Duration);
 
 		// Set back the speed of the player after the powerup duration.
-		stats.SpeedFactor /= Multiplicator;
+		playerController.SpeedBooster /= Multiplicator;
 
 		// Remove power up object.
 		Destroy(gameObject);

@@ -19,6 +19,24 @@ TextureImporter:
     21300028: GUI_14
     21300030: GUI_15
     21300032: DoYouWantToQuit
+    21300034: gui_0
+    21300036: gui_1
+    21300038: gui_2
+    21300040: gui_3
+    21300042: gui_4
+    21300044: gui_5
+    21300046: gui_6
+    21300048: gui_7
+    21300050: gui_8
+    21300052: gui_9
+    21300054: gui_10
+    21300056: gui_11
+    21300058: gui_12
+    21300060: gui_13
+    21300062: gui_14
+    21300064: gui_15
+    21300066: gui_16
+    21300068: gui_17
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -59,7 +77,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -101,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LevelCompleted
+      name: gui_0
       rect:
         serializedVersion: 2
         x: 64
@@ -115,13 +133,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a374c5830bb11ee499c6329613ca7fc3
+      spriteID: b5a5534f8e77eb340920fc63a378eb2e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SelectLevel
+      name: gui_1
       rect:
         serializedVersion: 2
         x: 2431
@@ -135,18 +153,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6efa88fdfe66fc4bb9446e84cdf3ea2
+      spriteID: f6523c5ff5f1ddf48992fb8c629571b0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Accept
+      name: gui_2
       rect:
         serializedVersion: 2
         x: 6334
         y: 3727
-        width: 320
+        width: 319
         height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -155,13 +173,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 273cde0229646f847b6561c2ce748348
+      spriteID: 0e34aaf70a2ecd34fb92f7c3c9b5c927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cancel
+      name: gui_3
       rect:
         serializedVersion: 2
         x: 6734
@@ -175,13 +193,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01cddd930900131438c5583cca055519
+      spriteID: 129f584bae1a7d94890d5b5d71205855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level1
+      name: gui_4
       rect:
         serializedVersion: 2
         x: 7136
@@ -195,18 +213,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ad9fd6691b0a5643a4d1a0d174786f1
+      spriteID: a1b420e9698527f45a30cba57f186977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level2
+      name: gui_5
       rect:
         serializedVersion: 2
-        x: 7534
+        x: 7535
         y: 3727
-        width: 320
+        width: 319
         height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -215,18 +233,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4efe3fa16e52144f9efff135da67ac0
+      spriteID: d9f3fa59c2be9934186acb854d879452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level3
+      name: gui_6
       rect:
         serializedVersion: 2
         x: 7933
         y: 3727
-        width: 323
+        width: 322
         height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -235,18 +253,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47405536ab30d7f40bf8e13654fabbfc
+      spriteID: 8641501ab227ede4a844b082d933b073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Coin
+      name: gui_7
       rect:
         serializedVersion: 2
-        x: 6346
+        x: 6347
         y: 3353
-        width: 280
+        width: 279
         height: 279
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -255,13 +273,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73870f45a5a5d1d4d9c9bb5589fb38a9
+      spriteID: fbf849cb3986eb747a940e2cd9de1a1e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heart
+      name: gui_8
       rect:
         serializedVersion: 2
         x: 6748
@@ -275,13 +293,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8ba40c28a3369f4ba6db486904932bc
+      spriteID: 64a8201c9ed11384b94d9d35e7357a21
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level4
+      name: gui_9
       rect:
         serializedVersion: 2
         x: 7136
@@ -295,18 +313,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1795eb84e72672c4e9cfbf82b32db845
+      spriteID: 4b676129d77ec3b40b527384daf2a9eb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level5
+      name: gui_10
       rect:
         serializedVersion: 2
-        x: 7534
+        x: 7535
         y: 3324
-        width: 320
+        width: 319
         height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -315,18 +333,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 422917220d0fcb544b4b0ef2b0c281dc
+      spriteID: cd9179d532f67ae4b970d5f12317ff9d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LevelLock
+      name: gui_11
       rect:
         serializedVersion: 2
         x: 7933
         y: 3324
-        width: 323
+        width: 322
         height: 319
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -335,18 +353,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d0abc94fe7261648b14e46299453704
+      spriteID: f6a8e06809a19a243aa70c3ff5dfbf7f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StarEmpty
+      name: gui_12
       rect:
         serializedVersion: 2
-        x: 6346
+        x: 6347
         y: 2956
-        width: 280
+        width: 279
         height: 277
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -355,13 +373,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0420b1d113f2b3a45b3dd6c07bb80b0d
+      spriteID: 826c045582c77a54ab72a039e6da66aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StarFull
+      name: gui_13
       rect:
         serializedVersion: 2
         x: 6748
@@ -375,13 +393,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4a7239e570b686498dcd16537431398
+      spriteID: 0a1869de2b75add43b6bde5ebe83e11b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_14
+      name: gui_14
       rect:
         serializedVersion: 2
         x: 224
@@ -395,13 +413,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98707e6dc7eaae5469f37f573fe15173
+      spriteID: 105ac3215e9561841ada136c5ec63cf8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_15
+      name: gui_15
       rect:
         serializedVersion: 2
         x: 529
@@ -415,13 +433,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dea71aa98b6df0f4eab6fffe4efdd3fc
+      spriteID: 501b658e031e0d747bdbb297fe758686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DoYouWantToQuit
+      name: gui_16
+      rect:
+        serializedVersion: 2
+        x: 2449
+        y: 470
+        width: 2102
+        height: 1252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 360, z: 11, w: 502}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad346338e5159d44b6f63c7697060bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_17
       rect:
         serializedVersion: 2
         x: 159
@@ -435,7 +473,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9afba6d943f47644d90f98aad505ac90
+      spriteID: 98449d3506232764582252ff8af84e34
       vertices: []
       indices: 
       edges: []
