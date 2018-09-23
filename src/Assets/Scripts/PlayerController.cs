@@ -46,11 +46,9 @@ public class PlayerController : MonoBehaviour
 	void Update () 
 	{
 		grounded = Physics2D.OverlapCircle(GroundCheck.position, 0.2f, 1 << LayerMask.NameToLayer("Ground")); // checks if you are within 0.15 position in the Y of the ground
-		Debug.Log(grounded);
 
 		if(Input.GetButtonDown("Jump") && grounded)
 		{
-			Debug.Log("Jump");
 			jump = true;
 		}
 	}
@@ -65,34 +63,34 @@ public class PlayerController : MonoBehaviour
 
 		if(h > 0 && Mathf.Abs(rig.velocity.x) < MaxSpeed)
 		{
-			rig.velocity = rig.velocity * 1.1f; // Gradually Increase Velocity
+			rig.velocity = rig.velocity * 1.1f;
 		}
 		else if(h < 0 && Mathf.Abs(rig.velocity.x) > MinSpeed)
 		{
-			rig.velocity = rig.velocity * 0.9f; // Gradually Reduce Velocity
+			rig.velocity = rig.velocity * 0.9f;
 		}
 		else if(h == 0)
 		{
 			rig.velocity = new Vector2(stats.Speed, rig.velocity.y);
 		}
 
-		// Ensure we are not exceeding min or max speed.
-		if(Mathf.Abs(rig.velocity.x) > MaxSpeed)
-		{
-			rig.velocity = new Vector2(MaxSpeed, rig.velocity.y);
-		}
-		else if(Mathf.Abs(rig.velocity.x) < MinSpeed)
-		{
-			rig.velocity = new Vector2(MinSpeed, rig.velocity.y);
-		}
+		// // Ensure we are not exceeding min or max speed.
+		// if(Mathf.Abs(rig.velocity.x) > MaxSpeed)
+		// {
+		// 	rig.velocity = new Vector2(MaxSpeed, rig.velocity.y);
+		// }
+		// else if(Mathf.Abs(rig.velocity.x) < MinSpeed)
+		// {
+		// 	rig.velocity = new Vector2(MinSpeed, rig.velocity.y);
+		// }
+
+		// if(jump)
+		// {
+		// 	//anim.SetTrigger("Jump");
+		// 	rig.AddForce(new Vector2(0f, JumpForce));
+		// 	jump = false;
+		// }
 
 		Debug.Log(rig.velocity);
-
-		if(jump)
-		{
-			//anim.SetTrigger("Jump");
-			rig.AddForce(new Vector2(0f, JumpForce));
-			jump = false;
-		}
 	}
 }

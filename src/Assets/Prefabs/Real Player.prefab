@@ -1277,7 +1277,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1419015156837004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.73, y: 2.8689055, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4963893463701490}
@@ -1583,7 +1583,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8}
+  m_Offset: {x: 0, y: 0.9}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1615,7 +1615,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 7497b63b19dca604fa977ded2127639d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1632,9 +1632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda354e059cbffc40862ca8ed24f4200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: 1
-  MoveForce: 200
-  JumpForce: 500
+  jump: 0
+  MoveForce: 500
+  JumpForce: 800
   GroundCheck: {fileID: 4145355772713720}
 --- !u!114 &114805678332898774
 MonoBehaviour:
@@ -1647,8 +1647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7197807c874426b478fec44698c27c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedFactor: 0.25
-  Speed: 5
+  SpeedFactor: 0.5
+  Speed: 2
   MaxHealth: 100
   CurrentHealth: 100
 --- !u!212 &212033267702816476
