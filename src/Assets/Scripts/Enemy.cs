@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Character
 {
 
     private float speed = 0;
+
+    public float ShootSpeed = 0.5f;
+
 
     // Use this for initialization
     void Start()
@@ -19,13 +22,21 @@ public class Enemy : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// This function is called when the MonoBehaviour will be destroyed.
+    /// </summary>
+    void OnDestroy()
+    {
+        CancelInvoke();
+    }
+
     void LaunchProjectile()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, (Game.instance.Player.transform.position - transform.position));
 
         if (hit.transform == Game.instance.Player.transform)
         {
-            Game.instance.SpawnBullet(transform.position, Game.instance.Player.transform.position, speed);
+            Game.instance.SpawnBullet(BulletType, transform.position, Game.instance.Player.transform.position, speed);
         }
     }
 
@@ -34,7 +45,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     void OnBecameVisible()
     {
-        InvokeRepeating("LaunchProjectile", 0.5f, 0.1f);
+        InvokeRepeating("LaunchProjectile", 0.5f, ShootSpeed);
     }
 
     /// <summary>
