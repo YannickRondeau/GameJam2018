@@ -64,14 +64,18 @@ public class PlayerController : MonoBehaviour
 		if(h > 0 && Mathf.Abs(rig.velocity.x) < MaxSpeed)
 		{
 			rig.velocity = rig.velocity * 1.1f;
+		//	rig.AddForce(new Vector2(6000,0));
+			Debug.Log("1.1");
 		}
 		else if(h < 0 && Mathf.Abs(rig.velocity.x) > MinSpeed)
 		{
 			rig.velocity = rig.velocity * 0.9f;
+			Debug.Log("0.9");
 		}
 		else if(h == 0)
 		{
 			rig.velocity = new Vector2(stats.Speed, rig.velocity.y);
+			Debug.Log("0");
 		}
 
 		// // Ensure we are not exceeding min or max speed.
