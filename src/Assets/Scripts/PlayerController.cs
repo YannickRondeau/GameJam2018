@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		grounded = Physics2D.OverlapCircle(GroundCheck.position, 0.2f, 1 << LayerMask.NameToLayer("Ground")); // checks if you are within 0.15 position in the Y of the ground
+		grounded = Physics2D.OverlapCircle(GroundCheck.position, 0.2f, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Solid")); // checks if you are within 0.15 position in the Y of the ground
 
 		if(Input.GetButtonDown("Jump") && grounded)
 		{

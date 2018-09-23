@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour 
 {
-	public int MaxHealth = 100;
+	private int MaxHealth = 100;
 	public int CurrentHealth = 100;
+
+
+	public void TakeDamage(int damage)
+	{
+		if(CurrentHealth > damage)
+		{
+			CurrentHealth -= damage;
+		}
+		else
+		{
+			// YOU'RE DEAD!
+		}
+	}
 }
